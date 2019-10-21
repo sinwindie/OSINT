@@ -3,7 +3,7 @@ Removeddit Bookmarklet (From Reddit Thread)
 javascript: {document.location = document.URL.replace("www.reddit.com/","www.removeddit.com/");}
 
 Reddit Full-Size Banner (From User Profile)
-javascript: var html = document.documentElement.innerHTML;    var subhtml = html.split('<div style="background-image:url(')[1];  var subhtml2 = subhtml.split('?width')[0]; alert("Bannerr: " + subhtml2);
+javascript: var html = document.documentElement.innerHTML;    var subhtml = html.split('<div style="background-image:url(')[1];  var subhtml2 = subhtml.split('?width')[0]; alert("Banner: " + subhtml2);
 
 Reddit Full-Size Profile Photo (From User Profile)
 javascript: var html = document.documentElement.innerHTML;    var subhtml = html.split(`"Profile icon" src="`).pop().split(`" class=`).shift();  if(subhtml.includes("png")) {     subhtml = subhtml.split('.png')[0] + ".png";  } if(subhtml.includes("jpg")) {     subhtml = subhtml.split('.jpg')[0] + ".jpg";  } alert("Avatar: " + subhtml);
