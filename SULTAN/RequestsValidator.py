@@ -1,4 +1,4 @@
-#Used to view and validate the error text coming form user profile that doesn't exist.
+#Used to view and validate the error text coming from user profile that doesn't exist.
 
 import requests
 
