@@ -1,3 +1,5 @@
+#Used to view and validate the error text coming form user profile that doesn't exist.
+
 import requests
 
 url = "INSERT URL TO USER PROFILE HERE"
