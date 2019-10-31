@@ -1,0 +1,8 @@
+#The below code allows you to open the full size photo of a TikTok user when you are looking at their profile.
+Just copy the below code into a new Bookmark in your browser, navigate to a user's profile, and click the new 
+bookmark to give it a try!
+
+javascript: var html = document.documentElement.innerHTML;     
+var subhtml = html.split('background-image:url(')[1];  
+var subhtml2 = subhtml.split(')')[0];  
+window.open(subhtml2,"_self");
