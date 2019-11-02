@@ -2,7 +2,82 @@
 Just copy the below code into a new Bookmark in your browser, navigate to a user's profile, and click the new 
 bookmark to give it a try!
 
-javascript: var html = document.documentElement.innerHTML;     
+javascript: 
+var html = document.documentElement.innerHTML;     
 var subhtml = html.split('background-image:url(')[1];  
 var subhtml2 = subhtml.split(')')[0];  
 window.open(subhtml2,"_self");
+
+#Prompts the user for a TikTok username and then opens that user's profile if it exists.
+
+javascript:  
+var username = prompt("Please enter TikTok username: ");   
+var url = "https://www.tiktok.com/@" + username;   
+window.open(url,"_self");
+
+#Prompts the user for a TikTok HashTag and then opens a search for that HashTag
+
+javascript:  
+var hashtag = prompt("Please enter TikTok HashTag: ");   
+var url = "https://www.tiktok.com/tag/" + hashtag;   
+window.open(url,"_self");
+
+# All Bookmarklets below may be used while looking at a TikTok video in a web browser
+###WARNING: YOU MUST REFRESH PAGE PRIOR TO CLICKING ANY OF THE BOOKMARKLETS BELOW
+# If you do not refresh the page of the video you are on prior to use then the info will be pulled from the 
+user's most recent video instead of the one you are currently looking at.
+
+#Displays a quickview of all important information about a video. 
+###WARNING: If you are using Chrome you will not be able to copy/paste the urls. This is a known issue
+with Chrome caused by the use of newlines ("\n"). You can remove them if you must use Chrome but the output
+will no longer be formatted neatly.
+
+javascript: 
+var html = document.documentElement.innerHTML; 
+var photohtml = html.split('background-image: url(&quot;')[1]; 
+var photohtml2 = photohtml.split('&quot')[0]; photohtml2 = photohtml2.replace("_100x100", ""); 
+var photooutput = "Full-Size User Photo: " + photohtml2; 
+
+var datehtml = html.split('uploadDate":"')[1]; 
+var datehtml2 = datehtml.split('"')[0]; 
+var dateoutput = "Video Upload Time: " + datehtml2; var 
+
+thumbhtml = html.split('poster="')[1]; 
+var thumbhtml2 = thumbhtml.split('"')[0]; 
+var thumboutput = "Video Thumbnail: " + thumbhtml2; 
+
+var videohtml = html.split('poster="')[1]; 
+var videohtml2 = videohtml.split('" loop=')[0]; 
+videohtml2 = videohtml2.split('src="')[1]; 
+videohtml2 = videohtml2.replace("amp;", ""); 
+var videooutput = "Video Download Link: " + videohtml2; 
+
+var fulloutput = (photooutput + "\n" + "\n" + videooutput + "\n" + "\n" + thumboutput + "\n"+ "\n" + dateoutput); 
+alert(fulloutput);
+
+#Opens the thumbnail for the current video
+
+javascript:  
+var html = document.documentElement.innerHTML;      
+var subhtml = html.split('poster="')[1];   
+var subhtml2 = subhtml.split('"')[0];  
+window.open(subhtml2,"_self");
+
+#Opens Full-Size Photo of user that posted the video
+
+javascript:    
+var html = document.documentElement.innerHTML; 
+var photohtml = html.split('background-image: url(&quot;')[1]; 
+var photohtml2 = photohtml.split('&quot')[0];    
+photohtml2 = photohtml2.replace("_100x100", ""); 
+window.open(photohtml2, "_self");
+
+#Opens video so that it can be downloaded. Just right-click when it opens and click save as.
+
+javascript:  
+var html = document.documentElement.innerHTML;  
+var videohtml = html.split('poster="')[1]; 
+var videohtml2 = videohtml.split('" loop=')[0];  
+videohtml2 = videohtml2.split('src="')[1];  
+videohtml2 = videohtml2.replace("amp;", "");  
+window.open(videohtml2,"_self");
