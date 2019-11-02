@@ -72,7 +72,7 @@ var photohtml2 = photohtml.split('&quot')[0];
 photohtml2 = photohtml2.replace("_100x100", ""); 
 window.open(photohtml2, "_self");
 
-#Opens video so that it can be downloaded. Just right-click when it opens and click save as.
+#Opens video so that it can be downloaded. Just right-click when it opens and click save video as.
 
 javascript:  
 var html = document.documentElement.innerHTML;  
