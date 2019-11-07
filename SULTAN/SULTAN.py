@@ -1,28 +1,38 @@
 # Imports needed to function
 import requests
+import xlrd
 
 #Main function
 def main():
 	
-	  #Prompt for username
-    username = raw_input("Enter a Username: ")
-    
-    #Array holding urla variables
-    urla = ["header","https://graph.facebook.com/","https://twitter.com/","https://www.instagram.com/","https://myspace.com/","https://www.youtube.com/"]
-    
-    #Array holding urlb variables
-    urlb = ["Social Media","","","","",""]
-    
-    #Array holding error text variables
-    error = ["header","Some of the aliases you requested do not exist","Sorry, that page","The link you followed may be broken","Not Found","404handler"]
-    
-    #Array holding valid usernames for validation testing
-    valid = ["n/a","jeff","twitter","twitter","jess","jess"]
-    
+	#Arrays used to hold data imported from xlsx 
+    urla = []
+    urlb = []
+    error = []
+    valid = []
     url = ""            # Holds full url (UrlA + username + UrlB)
     count = 0           # Counter for looping
     found = 0           # Counter for number of found usernames
     notfound = 0        # Flag for if error text found
+	
+    #Prompt for username
+    username = raw_input("Enter a Username: ")
+    
+    # Location of xlsx file for pulling data
+    data = ("###REPLACEWITHFULLPATHTOYOURXLSXFILE###")
+    
+    #Set up xlrd
+    wb = xlrd.open_workbook(data)
+    sheet = wb.sheet_by_index(0)
+    sheet.cell_value(0,0)
+    
+    # Pulls columns from excel file and adds them to array
+    for i in range(sheet.nrows): 
+        urla.append((sheet.cell_value(i, 0)))
+        urlb.append((sheet.cell_value(i, 1)))  
+        error.append((sheet.cell_value(i, 2)))
+        valid.append((sheet.cell_value(i, 3)))  
+
 	
 	  #Loops through entire array
     for n in urla:
@@ -45,7 +55,10 @@ def main():
         else:
 
             #Send request to page
-            r = requests.get(url)
+            try:
+                r = requests.get(url)
+            except:
+                print("Could not connect to: " + url)
             
             #returns the HTML as a string            
             html = r.text
