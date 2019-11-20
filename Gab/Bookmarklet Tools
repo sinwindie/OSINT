@@ -1,0 +1,26 @@
+# Copy and paste the below bookmarklets into a new bookmark in your browser of choice
+
+# Username Search
+
+javascript:  var username = prompt("Please enter Gab username: ");   
+var url = "https://gab.com/" + username;   window.open(url, "_self");
+
+# Hashtag Search
+
+javascript:  var hashtag = prompt("Please enter Gab HashTag: ");   
+var url = "https://gab.com/tags/" + hashtag;   window.open(url,"_self");
+
+# Pull Fullsize Avatar from Profile
+
+javascript:   var html = document.documentElement.innerHTML;        
+var subhtml = html.split('parallax"')[1];   
+var subhtml2 = subhtml.split('&quot;')[1];  
+window.open(subhtml2,"_self");
+
+# Pull Fullsize Header from Profile
+
+javascript:   var html = document.documentElement.innerHTML;        
+var subhtml = html.split('account__header__info')[1];  
+var subhtml2 = subhtml.split('="')[1];  
+var subhtml2 = subhtml2.split('"')[0];  
+window.open(subhtml2,"_self")
