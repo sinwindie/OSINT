@@ -28,3 +28,21 @@ var subhtml = html.split('account__header__info')[1];
 var subhtml2 = subhtml.split('="')[1];  
 var subhtml2 = subhtml2.split('"')[0];  
 window.open(subhtml2,"_self")
+
+# Opens video in window so it can be downloaded with right-click and save as. Must be on Gab with video.
+
+javascript:    
+var html = document.documentElement.innerHTML;         
+var subhtml = html.split('playsinline=')[1];    
+var subhtml2 = subhtml.split('src="')[1]; 
+var subhtml2 = subhtml2.split('"')[0]; 
+window.open(subhtml2,"_self");
+
+# Opens video thumbnail in window so it can be downloaded with right-click and save as. Must be on Gab with video.
+
+javascript:    
+var html = document.documentElement.innerHTML;         
+var subhtml = html.split('playsinline=')[1];    
+var subhtml2 = subhtml.split('poster="')[1]; 
+var subhtml2 = subhtml2.split('"')[0]; 
+window.open(subhtml2,"_self");
