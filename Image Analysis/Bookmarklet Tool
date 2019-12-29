@@ -1,0 +1,29 @@
+//Copy and paste the entiretity of the code below into a new bookmark. Be advised that your browser will likely 
+block the results otehr than the first popup and you may need to allow popups for the initial use.
+
+javascript:   
+var imageurl = prompt("Paste image URL here: ");     
+
+var google = "https://www.google.com/searchbyimage?&image_url=" + imageurl;  
+var yandex = "https://yandex.com/images/search?source=collections&rpt=imageview&url=" + imageurl;    
+var tineye = "https://www.tineye.com/search/?url=" + imageurl;  
+var bing = "https://www.bing.com/images/search?view=detailv2&iss=sbi&form=SBIIRP&sbisrc=UrlPaste&q=imgurl:" + imageurl;  
+var baidu = "https://graph.baidu.com/details?isfromtusoupc=1tn=pc&carousel=0&image=&image=" + imageurl;  
+var exif = "http://exif.regex.info/exif.cgi?&url=" + imageurl;  
+var photoshop = "https://fotoforensics.com/?&uploadURLForm=fotoforensics.com?&url=" + imageurl;  
+
+GoogleFunction(); 
+TineyeFunction(); 
+YandexFunction(); 
+BingFunction(); 
+BaiduFunction(); 
+ExifFunction(); 
+PhotoshopFunction();  
+
+function YandexFunction() {   setTimeout(function(){ window.open(yandex, "_blank"); }, 1000); }  
+function GoogleFunction() {   setTimeout(function(){ window.open(google, "_blank"); }, 2000); }  
+function TineyeFunction() {   setTimeout(function(){ window.open(tineye, "_blank"); }, 3000); }  
+function BingFunction() {   setTimeout(function(){ window.open(bing, "_blank"); }, 4000); }  
+function BaiduFunction() {   setTimeout(function(){ window.open(baidu, "_blank"); }, 4000); }  
+function ExifFunction() {   setTimeout(function(){ window.open(exif, "_blank"); }, 5000); }  
+function PhotoshopFunction() {   setTimeout(function(){ window.open(photoshop, "_blank"); }, 6000); }
