@@ -1,5 +1,5 @@
 //Copy and paste the entiretity of the code below into a new bookmark. Be advised that your browser will likely 
-block the results otehr than the first popup and you may need to allow popups for the initial use.
+block the results other than the first popup and you may need to allow popups for the initial use.
 
 javascript:   
 var imageurl = prompt("Paste image URL here: ");     
