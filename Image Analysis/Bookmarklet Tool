@@ -21,8 +21,8 @@ BaiduFunction();
 ExifFunction(); 
 
 function YandexFunction() {   setTimeout(function(){ window.open(yandex, "_blank"); }, 1000); }  
-function GoogleFunction() {   setTimeout(function(){ window.open(google, "_blank"); }, 2000); }  
-function TineyeFunction() {   setTimeout(function(){ window.open(tineye, "_blank"); }, 3000); }  
-function BingFunction() {   setTimeout(function(){ window.open(bing, "_blank"); }, 4000); }  
-function BaiduFunction() {   setTimeout(function(){ window.open(baidu, "_blank"); }, 4000); }  
-function ExifFunction() {   setTimeout(function(){ window.open(exif, "_blank"); }, 5000); }  
+function GoogleFunction() {   setTimeout(function(){ window.open(google, "_blank"); }, 1000); }  
+function TineyeFunction() {   setTimeout(function(){ window.open(tineye, "_blank"); }, 1000); }  
+function BingFunction() {   setTimeout(function(){ window.open(bing, "_blank"); }, 1000); }  
+function BaiduFunction() {   setTimeout(function(){ window.open(baidu, "_blank"); }, 1000); }  
+function ExifFunction() {   setTimeout(function(){ window.open(exif, "_blank"); }, 1000); }  
