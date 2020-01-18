@@ -1,0 +1,45 @@
+##### General Websites Useful in Pokemon GO Investigations #####
+
+# Search by Location
+https://pogotrainer.club/
+https://gamepress.gg/pokemongo/trainer-codes-list
+
+# Mapping
+https://pokelytics.com/
+https://www.openstreetmap.org/
+
+# QR Codes
+https://webqr.com/index.html
+
+
+##### Copy and paste the below bookmarklets into a new bookmark in your browser of choice to use the tools #####
+
+
+# Search for user by trainer code
+
+javascript:      
+var code = prompt("Paste Trainer Code here: ");         
+var google = "https://www.google.com/search?&q=" + '"' + code + '"';       
+var reddit = "https://www.reddit.com/r/PokémonGoFriends/search/?q=" + code +"&restrict_sr=1";   
+var twitter = "https://twitter.com/search?q=" + code;     
+
+GoogleFunction();       
+RedditFunction();  
+TwitterFunction();
+
+function GoogleFunction() {   setTimeout(function(){ window.open(google, "_blank"); }, 1000); }
+function RedditFunction() {   setTimeout(function(){ window.open(reddit, "_blank"); }, 1000); }   
+function TwitterFunction() {   setTimeout(function(){ window.open(twitter, "_blank"); }, 1000); }   
+
+# Search for user by username
+
+javascript:      
+var username = prompt("Enter username here: ");         
+var friendhunter = "https://api.friendhuntr.com/distribute/payload-search?username=" + username;        
+var pokebattler = "https://www.Pokebattler.com/profiles?search=" + username +  "&page=0#searchResult";     
+
+FriendHunterFunction();       
+PokeBattlerFunction();  
+
+function FriendHunterFunction() {   setTimeout(function(){ window.open(friendhunter, "_blank"); }, 1000); }
+function PokeBattlerFunction() {   setTimeout(function(){ window.open(pokebattler, "_blank"); }, 1000);} 
