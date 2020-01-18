@@ -20,7 +20,7 @@ https://webqr.com/index.html
 javascript:      
 var code = prompt("Paste Trainer Code here: ");         
 var google = "https://www.google.com/search?&q=" + '"' + code + '"';       
-var reddit = "https://www.reddit.com/r/PokémonGoFriends/search/?q=" + code +"&restrict_sr=1";   
+var reddit = "https://www.reddit.com/r/PokemonGoFriends/search/?q=" + code +"&restrict_sr=1";   
 var twitter = "https://twitter.com/search?q=" + code;     
 
 GoogleFunction();       
