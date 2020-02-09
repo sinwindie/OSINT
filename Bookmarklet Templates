@@ -1,0 +1,7 @@
+\\Template for extracting text from source code
+
+javascript:   
+var html = document.documentElement.innerHTML;        
+var subhtml = html.split('$leftlimittext’)[1];  
+var output = subhtml.split('$rightlimittext’)[0];  
+alert(output)
