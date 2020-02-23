@@ -1,0 +1,16 @@
+// Copy the below code into a bookmark to run a bit.ly or other shortened URL through three URL expander services
+
+javascript:   
+var input = prompt("Paste in the shortened URL to be expanded: ");     
+
+var getlinkinfo = "http://www.getlinkinfo.com/info?link=" + input;  
+var checkshorturl =  "https://checkshorturl.com/expand.php?u=" + input;
+var expandurl =  "https://www.expandurl.net/expand?&url=" + input;
+
+GetLinkInfoFunction(); 
+CheckShortUrlFunction(); 
+ExpandUrlFunction(); 
+
+function GetLinkInfoFunction() {   setTimeout(function(){ window.open(getlinkinfo, "_blank"); }, 1000); }  
+function CheckShortUrlFunction() {   setTimeout(function(){ window.open(checkshorturl, "_blank"); }, 1000); }  
+function ExpandUrlFunction() {   setTimeout(function(){ window.open(expandurl, "_blank"); }, 1000); }  
