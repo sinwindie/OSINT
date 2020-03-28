@@ -1,0 +1,15 @@
+# Copy and paste the below bookmarklets into a new bookmark in your browser of choice
+
+# Extract Larger Profile Photo (Must be activated when viewing a Linkedin Profile)
+
+javascript: 
+var currentLocation = window.location.href;  
+var newLocation = currentLocation + "detail/photo/";  
+window.location.replace(newLocation);   
+
+# Find Account Via Email (Functionality likely to be removed by LinkedIn in the near future)
+
+javascript:  
+var email = prompt("Please enter target's email address: ");   
+var url = "https://www.linkedin.com/sales/gmail/profile/viewByEmail/" + email;   
+window.open(url,"_self");
