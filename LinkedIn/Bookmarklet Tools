@@ -7,9 +7,16 @@ var currentLocation = window.location.href;
 var newLocation = currentLocation + "detail/photo/";  
 window.location.replace(newLocation);   
 
-# Find Account Via Email (Functionality likely to be removed by LinkedIn in the near future)
+javascript: 
+var currentLocation = window.location.href;  
+var newLocation = currentLocation + "detail/photo/";  
+window.location.replace(newLocation);  
+
+# Find Account Via Email (Functionality removed by LinkedIn)
 
 javascript:  
 var email = prompt("Please enter target's email address: ");   
 var url = "https://www.linkedin.com/sales/gmail/profile/viewByEmail/" + email;   
 window.open(url,"_self");
+ 
+
