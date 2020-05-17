@@ -7,10 +7,12 @@ var currentLocation = window.location.href;
 var newLocation = currentLocation + "detail/photo/";  
 window.location.replace(newLocation);   
 
-javascript: 
-var currentLocation = window.location.href;  
-var newLocation = currentLocation + "detail/photo/";  
-window.location.replace(newLocation);  
+#View Recent Activity on a profile
+
+javascript:  
+var currentLocation = window.location.href;   
+var newLocation = currentLocation + "detail/recent-activity/";   
+window.location.replace(newLocation);
 
 # Find Account Via Email (Functionality removed by LinkedIn)
 
