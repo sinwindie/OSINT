@@ -1,3 +1,5 @@
+Search Reddit
+https://socialgrep.com/search
 
 Removeddit Bookmarklet (From Reddit Thread)
 javascript: {document.location = document.URL.replace("www.reddit.com/","www.removeddit.com/");}
